@@ -1,1 +1,17 @@
-
+{
+  "version": "1.0.0",
+  "features": {
+    "chat": true,
+    "memory": true,
+    "approvals": true,
+    "auditLog": true,
+    "selfUpdate": true,
+    "desktopApp": false,
+    "mobileApp": false,
+    "voiceMode": false,
+    "faceIdentity": false,
+    "backgroundTasks": false,
+    "tradingTools": false
+  },
+  "phase": "foundation"
+}
