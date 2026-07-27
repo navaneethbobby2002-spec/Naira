@@ -1,1 +1,41 @@
-
+{
+  "version": "1.0.0",
+  "commands": [
+    {
+      "name": "status",
+      "description": "Show NAIRA system status",
+      "intent": "show_status",
+      "risk": "low"
+    },
+    {
+      "name": "remember",
+      "description": "Store a memory after approval when needed",
+      "intent": "store_memory",
+      "risk": "medium"
+    },
+    {
+      "name": "features",
+      "description": "Show current enabled features",
+      "intent": "show_features",
+      "risk": "low"
+    },
+    {
+      "name": "upgrade-commands",
+      "description": "Update commands.json with approved changes",
+      "intent": "update_commands",
+      "risk": "medium"
+    },
+    {
+      "name": "upgrade-features",
+      "description": "Update features.json with approved changes",
+      "intent": "update_features",
+      "risk": "medium"
+    },
+    {
+      "name": "rewrite-code",
+      "description": "Propose code rewrite for approved files only",
+      "intent": "rewrite_code",
+      "risk": "high"
+    }
+  ]
+}
