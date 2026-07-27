@@ -1,0 +1,62 @@
+{
+  "version": "1.0.0",
+  "defaultMode": "approval-gated",
+  "riskLevels": {
+    "low": {
+      "description": "Safe informational actions",
+      "autoAllowed": true,
+      "requiresApproval": false,
+      "examples": [
+        "answer_question",
+        "summarize_text",
+        "search_memory",
+        "show_status"
+      ]
+    },
+    "medium": {
+      "description": "Changes data or project content but inside approved limits",
+      "autoAllowed": false,
+      "requiresApproval": true,
+      "examples": [
+        "update_commands",
+        "update_features",
+        "update_prompts",
+        "create_task",
+        "store_memory"
+      ]
+    },
+    "high": {
+      "description": "Sensitive or structural actions",
+      "autoAllowed": false,
+      "requiresApproval": true,
+      "manualConfirmationOnly": true,
+      "examples": [
+        "rewrite_backend_code",
+        "rewrite_desktop_code",
+        "rewrite_mobile_code",
+        "delete_files",
+        "change_auth_rules",
+        "deploy_major_update"
+      ]
+    }
+  },
+  "allowedWritablePaths": [
+    "shared/commands.json",
+    "shared/features.json",
+    "config/identity.json",
+    "config/permissions.json"
+  ],
+  "blockedWritablePaths": [
+    ".github/",
+    ".gitignore",
+    "secrets/",
+    "node_modules/",
+    ".env",
+    ".env.local"
+  ],
+  "rules": {
+    "requireAuditLog": true,
+    "requireRollbackPoint": true,
+    "requireApprovalForPathExpansion": true
+  }
+}
